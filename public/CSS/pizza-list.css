@@ -1,0 +1,37 @@
+
+.orders {
+    width: 80%;
+    height: 85vh;
+    margin: 20px 0;
+}
+
+.orders .order-title {
+    width: 100%;
+    background-color: var(--maincolor);
+    color: white;
+    padding: 10px 12px;
+}
+
+.orders .order-list {
+    width: 100%;
+    padding-top: 10px;
+    font-size: var(--fontSize);
+    background-color: var(--background-color);
+}
+
+.orders .order-list a {
+    padding: 10px 20px;
+    color: var(--maincolor);
+    border-bottom: 5px solid white;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.orders .order-list a img {
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <link rel="stylesheet" href="../../CSS/create.css">
+    <title>Order</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <h1 class="logo">Pizza House</h1>
+            </a>
+        </div>
+    </header>
+
+    <form class="order-form" action="/pizza/create-order" method="POST">
+        <h1>Fill the order:</h1>
+        <label for="name">
+            <h2>Your Name:</h2>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </label>
+
+        <label for="type">  <h2>Pizza Type:</h2>
+            <select name="type" id="type" required>
+            <option disabled selected value="" class="gray">Choose pizza type</option>
+            <option value="margherita" class="option">Marhgerita</option>
+            <option value="hawaiian" class="option">Hawaiian</option>
+            <option value="veg supreme" class="option">Veg supreme</option>
+            <option value="volcano" class="option">Volcano</option>
+            </select>
+        </label>
+
+        <label for="base">   <h2>Pizza Base:</h2>
+            <select name="base" id="base" required>
+            <option disabled selected value="" class="gray">Choose pizza base</option>
+            <option value="cheesy crust" class="option">Cheesy crust</option>
+            <option value="garlic crust" class="option">Garlic crust</option>
+            <option value="thin & crispy" class="option">Thin & crispy</option>
+            <option value="thick" class="option">Thick</option>
+            </select>
+        </label>
+
+        <fieldset>
+            <h2>Extra toppings:</h2>
+            <input type="checkbox" id="topping1" name="topping" value="mushrooms">
+            <label for="topping1" class="check">Mushrooms</label> <br>
+
+            <input type="checkbox" id="topping2" name="topping" value="peppers">
+            <label for="topping2" class="check">Peppers</label> <br>
+
+            <input type="checkbox" id="topping3" name="topping" value="garlic">
+            <label for="topping3" class="check">Garlic</label> <br>
+
+            <input type="checkbox" id="topping4" name="topping" value="olives">
+            <label for="topping4" class="check">Olives</label> <br>
+
+        </fieldset>
+            <input type="submit" value="Send" id="submit">
+    
+        </form>
+
+        <footer>Copyright &copy; Pizza House 2023</footer>
+
+    </body>
+</html>

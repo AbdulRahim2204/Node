@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/main.css">
+    <link rel="stylesheet" href="../../CSS/pizza-list.css">
+    <title>Order List</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <h1 class="logo">Pizza House</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="orders">
+        <h1 class="order-title">Order List</h1>
+        <div class="order-list">
+            <% if(typeof pizzaList !== 'undefined') { %>
+                <% if(Array.isArray(pizzaList)) {%>
+
+                    <% pizzaList.forEach(pizza => { %>
+                        <a href="/pizza/orders/<%= pizza._id %>">
+                            <img src="../IMG/pizza.png" alt="pizza image">
+                            <div>
+                                <h2>Type</h2>
+                                <p><%= pizza.type %></p>
+                            </div>
+
+                            <div>
+                                <h2>Base</h2>
+                                <p><%= pizza.base %></p>
+                            </div>
+
+                            <div>
+                                <h2>Topping</h2>
+                                <% if(typeof pizza.topping !== 'undefined'){ %>
+                                    <ul>
+                                        <% if(Array.isArray(pizza.topping)) { %>
+                                            <% pizza.topping.forEach(top => { %>
+                                            <li><%= top %></li> 
+                                            <% }); %> 
+                                        <% } else { %> 
+                                            <li><%= pizza.topping %></li> 
+                                        <% } %> 
+                                    </ul> 
+                                <% } else { %> 
+                                    <p>No Topping</p>
+                                <% } %> 
+                            </div> 
+                        </a> 
+                    <% }); %> 
+
+                <% } else { %>
+                    <a href="/pizza/orders/<%= pizza._id %>">
+                        <img src="../IMG/pizza.png" alt="pizza image">
+                        <div>
+                            <h2>Type</h2>
+                            <p><%= pizza.type %></p>
+                        </div>
+
+                        <div>
+                            <h2>Base</h2>
+                            <p><%= pizza.base %></p>
+                        </div>
+
+                        <div>
+                            <h2>Topping</h2>
+                            <% if(typeof pizza.topping !== 'undefined'){ %>
+                                <% if(Array.isArray(pizza.topping)) { %>
+                                    <ul>
+                                        <% pizza.topping.forEach(top => { %>
+                                            <li><%= top %></li> 
+                                        <% }); %> 
+                                    </ul>
+                                    <% } else { %> 
+                                        <ul>
+                                            <li><%= pizza.topping %></li> 
+                                        </ul> 
+                                    <% } %> 
+                            <% } else { %> 
+                                <p>No Topping</p>
+                            <% } %> 
+                        </div> 
+                    </a>
+                <% } %>
+
+            <% } else { %>
+                <% if(typeof msg !== 'undefined'){ %>
+                    <p><%= msg %></p>
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+    <footer>Copyright &copy; Pizza House 2023</footer>
+</body>
+</html>

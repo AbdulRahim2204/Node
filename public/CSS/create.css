@@ -1,0 +1,74 @@
+.order-form {
+    width: 50%;
+    height: 85vh;
+    margin: 20px 0;
+    padding: 10px 40px;
+    background-color: #eee;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.order-form h1 {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--maincolor);
+    color: white;
+}
+
+.order-form h2 {
+    color: var(--maincolor);
+    padding-bottom: 10px;
+}
+
+#name {
+    padding: 7px 5px;
+}
+
+.order-form input::placeholder {
+    font-size: 16px;
+}
+
+#name,
+#type,
+#base {
+    width: 300px;
+    border: 1px solid #aaa;
+    outline-color: var(--maincolor);
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.option {
+    padding: 3px 5px;
+    color: var(--maincolor);
+}
+
+.order-form fieldset {
+    border: none;
+}
+
+.order-form fieldset .check {
+    font-size: 16px;
+    font-weight: lighter;
+    padding-bottom: 20px;
+}
+
+.order-form #submit {
+    width: 80px;
+    padding: 5px 3px;
+    background-color: var(--maincolor);
+    color: white;
+    font-size: var(--fontSize);
+    font-weight: bolder;
+    border: 2px solid var(--maincolor);
+    border-radius: 3px;
+    outline: none;
+}
+
+.order-form #submit:hover {
+    color: var(--maincolor);
+    background-color: white;
+}

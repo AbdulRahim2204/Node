@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.order-detail {
+    width: 60%;
+    height: 50vh;
+    margin: 10px 0 20px;
+    padding: 10px;
+    background-color: var(--background-color);
+}
+
+.order-detail h1 {
+    background-color: var(--maincolor);
+    padding: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.order-detail p {
+    color: var(--maincolor);
+    font-size: var(--fontSize);
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.order-detail ul {
+    list-style: none;
+    color: var(--maincolor);
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.order-detail form button {
+    background-color: var(--maincolor);
+    color: white;
+    font-weight: bold;
+    font-size: var(--fontSize);
+    outline-color: white;
+    border: 2px solid var(--maincolor);
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-top: 50px;
+}
+
+.back button {
+    background-color: var(--maincolor);
+    padding: 5px 10px;
+    outline-color: white;
+    border: 2px solid var(--maincolor);
+    border-radius: 3px;
+    font-size: var(--fontSize);
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
